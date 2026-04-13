@@ -1,0 +1,23 @@
+{
+  "feishu": {
+    "appId": "your_feishu_app_id",
+    "appSecret": "your_feishu_app_secret",
+    "verificationToken": "your_verification_token",
+    "encryptKey": "your_encrypt_key",
+    "enabled": true,
+    "configured": true,
+    "botOpenId": "your_bot_open_id"
+  },
+  "dingtalk": {
+    "appKey": "your_dingtalk_app_key",
+    "appSecret": "your_dingtalk_app_secret",
+    "robotWebhook": "your_robot_webhook_url",
+    "webhook": "your_webhook_url",
+    "secret": "your_secret",
+    "enabled": false,
+    "configured": false
+  },
+  "database": {
+    "path": "workspace/data/memory.db"
+  }
+}

@@ -1,0 +1,31 @@
+id: daily_briefing
+name: 每日简报
+description: 每天早上自动生成并发送简报
+version: 1.0
+
+trigger:
+  type: MANUAL
+
+steps:
+  - id: fetch_weather
+    name: 获取天气信息
+    type: TOOL
+    tool: web_search
+    keyword: 今日天气
+
+  - id: fetch_news
+    name: 获取新闻资讯
+    type: TOOL
+    tool: web_search
+    keyword: 今日新闻
+
+  - id: generate_briefing
+    name: 生成简报
+    type: AGENT
+    prompt: 根据天气和新闻资讯，生成一份简洁的每日简报
+
+  - id: send_notification
+    name: 发送通知
+    type: NOTIFY
+    channel: FEISHU
+    message: "{{lastResult}}"

@@ -1,0 +1,1 @@
+# No external dependencies — uses only built-in Claw browser tools

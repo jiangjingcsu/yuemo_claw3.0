@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-ai-alibaba-demo
+  ai:
+    dashscope:
+      api-key: ${ALI_API_KEYS}
+  main:
+    web-application-type: servlet
+  datasource:
+    url: jdbc:sqlite:workspace/data/memory.db
+    driver-class-name: org.sqlite.JDBC
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.yuemo.demo: DEBUG
+  file:
+    path: logs
+    name: logs/spring-ai-alibaba-demo.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 30
+      total-size-cap: 1GB
